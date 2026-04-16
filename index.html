@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Magic Card 💖</title>
     <style>
         body {
+            margin: 0;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .page1 {
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background: pink;
-            font-family: Arial;
         }
 
         .card {
             background: white;
             padding: 40px;
             border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             cursor: pointer;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
             transition: 0.3s;
         }
 
         .card:hover {
             transform: scale(1.1);
         }
+
+        img {
+            width: 200px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .page2 {
+            display: none;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: white;
+            padding-top: 100px;
+        }
     </style>
 </head>
 
 <body>
+
+<div class="page1" id="page1">
+
+    <!-- IMAGE 1 -->
+    <img src="your-image.jpg" alt="card image">
+
     <div class="card" onclick="openCard()">
         <h2>✨ Click Me ✨</h2>
-        <p>Something special is waiting for you 💌</p>
+        <p>Something special is waiting 💌</p>
     </div>
+</div>
 
-    <script>
-        function openCard() {
-            window.location.href = "surprise.html";
-        }
-    </script>
+<div class="page2" id="page2">
+
+    <!-- IMAGE 2 -->
+    <img src="your-image2.jpg" alt="surprise image">
+
+    <h1>💖 Happy Special Day 💖</h1>
+    <p>You are very special to me ✨</p>
+</div>
+
+<script>
+function openCard() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+}
+</script>
+
 </body>
-
 </html>
