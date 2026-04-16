@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Magic Card 💖</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: pink;
+            font-family: Arial;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card" onclick="openCard()">
+        <h2>✨ Click Me ✨</h2>
+        <p>Something special is waiting for you 💌</p>
+    </div>
+
+    <script>
+        function openCard() {
+            window.location.href = "surprise.html";
+        }
+    </script>
+</body>
+
+</html>
